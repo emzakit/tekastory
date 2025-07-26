@@ -1,0 +1,90 @@
+
+{
+  "build": {
+    "beforeDevCommand": "npm run dev:vite",
+    "beforeBuildCommand": "npm run build:vite",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "TekaStory",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "fs": {
+        "all": true,
+        "scope": [
+          "$APP/*",
+          "$DESKTOP/*",
+          "$APPLOG/*"
+        ]
+      },
+      "dialog": {
+        "all": true
+      },
+      "window": {
+        "all": false,
+        "create": true,
+        "close": true,
+        "setTitle": true,
+        "setFocus": true
+      },
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "Productivity",
+      "copyright": "Copyright (c) 2024 Mundhir Werner",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "identifier": "com.tekastory.app",
+      "icon": [
+        "icons/icon-app.icns",
+        "icons/icon-app.ico"
+      ],
+      "longDescription": "A powerful and intuitive application for creating, managing, and exporting storyboards.",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [
+        "../README.html",
+        "../images",
+        "../fonts"
+      ],
+      "shortDescription": "Visually plan your narrative with customizable panels.",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": "default-src 'self'; connect-src 'self' asset:; script-src 'self' https://esm.sh; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com asset:; img-src 'self' data: blob: asset:;"
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 1080,
+        "resizable": true,
+        "title": "TekaStory",
+        "width": 1920
+      }
+    ]
+  }
+}
