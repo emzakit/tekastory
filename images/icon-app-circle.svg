@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 512 512">
+  <!-- Generator: Adobe Illustrator 29.6.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 9)  -->
+  <defs>
+    <style>
+      .st0 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .st1 {
+        fill: url(#linear-gradient);
+      }
+
+      .st2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="48.96" y1="256" x2="463.04" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#bb186c"/>
+      <stop offset="1" stop-color="#70186c"/>
+    </linearGradient>
+    <filter id="drop-shadow-1" x="129" y="121" width="261" height="261" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".75"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect class="st1" x="48.96" y="48.96" width="414.09" height="414.09" rx="207.04" ry="207.04"/>
+  <g class="st0">
+    <rect class="st2" x="146.42" y="208.65" width="218.58" height="37.55"/>
+    <rect class="st2" x="146.42" y="246.2" width="218.58" height="110.76"/>
+    <line class="st2" x1="166.86" y1="246.2" x2="188.1" y2="222.73"/>
+    <line class="st2" x1="205.18" y1="246.2" x2="226.42" y2="222.73"/>
+    <line class="st2" x1="243.49" y1="246.2" x2="264.73" y2="222.73"/>
+    <line class="st2" x1="281.81" y1="246.2" x2="303.05" y2="222.73"/>
+    <line class="st2" x1="320.12" y1="246.2" x2="341.36" y2="222.73"/>
+    <line class="st2" x1="217.94" y1="286.23" x2="293.48" y2="286.23"/>
+    <line class="st2" x1="194.86" y1="316.92" x2="316.56" y2="316.92"/>
+    <g>
+      <rect class="st2" x="141.26" y="151.74" width="218.58" height="37.55" transform="translate(-26.6 47.89) rotate(-10.37)"/>
+      <line class="st2" x1="159.77" y1="168.04" x2="184.88" y2="187.3"/>
+      <line class="st2" x1="197.46" y1="161.14" x2="222.57" y2="180.4"/>
+      <line class="st2" x1="235.15" y1="154.24" x2="260.26" y2="173.5"/>
+      <line class="st2" x1="272.83" y1="147.34" x2="297.95" y2="166.6"/>
+      <line class="st2" x1="310.52" y1="140.45" x2="335.64" y2="159.71"/>
+    </g>
+  </g>
+</svg>

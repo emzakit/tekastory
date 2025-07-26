@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TekaStory Documentation</title>
+    <style>
+        :root {
+          /* --- ACTION COLORS --- */
+          --color-primary: #00A3DD; /* Zanzibar Blue */
+          --color-primary-hover: #008bb4;
+          --color-secondary: #1EB53A; /* Zanzibar Green */
+          --color-secondary-hover: #18912e;
+          --color-accent: #FCD116; /* Zanzibar Yellow */
+          --color-danger: #dc2626;
+          --color-danger-hover: #b91c1c;
+
+          /* --- SURFACE COLORS --- */
+          --color-background: #f8f9fa;
+          --color-surface: #ffffff;
+          --color-surface-muted: #e9ecef;
+          --color-surface-hover: #dee2e6;
+          
+          /* --- TEXT COLORS --- */
+          --color-text: #212529; /* Near Black */
+          --rgb-text: 33, 37, 41;
+          --color-text-medium: #495057;
+          --color-text-muted: #6c757d;
+          --color-text-subtle: #adb5bd;
+          --color-text-light: #ffffff;
+          
+          /* --- BORDER COLORS --- */
+          --color-border: #dee2e6;
+          --color-border-muted: #ced4da;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: var(--color-background); color: var(--color-text); line-height: 1.6; margin: 0; padding: 2rem; display: flex; gap: 2rem; justify-content: center; }
+        
+        .sidebar { width: 220px; flex-shrink: 0; position: sticky; top: 2rem; align-self: flex-start; }
+        
+        .sidebar nav { background-color: var(--color-surface); padding: 1rem; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid var(--color-border); }
+        
+        .sidebar h3 { font-size: 1.1rem; color: var(--color-text); margin-top: 0; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--color-border); }
+        
+        .sidebar ul { list-style: none; padding: 0; margin: 0; }
+        
+        .sidebar li a { display: block; padding: 0.5rem 0.75rem; text-decoration: none; color: var(--color-text-medium); border-radius: 6px; transition: all 0.2s ease; font-size: 0.9rem; }
+        
+        .sidebar li a:hover { background-color: var(--color-surface-muted); color: var(--color-text); }
+        
+        .sidebar li a.active { background-color: var(--color-primary); color: var(--color-text-light); font-weight: 600; }
+        
+        .container { max-width: 800px; width: 100%; background-color: var(--color-surface); padding: 2rem 3rem; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid var(--color-border); padding-bottom: 45vh; }
+        
+        .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); }
+        
+        .header-logo { height: 100px; width: auto; }
+        h1 { color: var(--color-text); font-size: 2.5rem; margin-bottom: 0.5rem; }
+        
+        .subheading { font-size: 1.25rem; color: var(--color-primary); margin-top: 0; margin-bottom: 2rem; }
+        
+        h2 { font-size: 1.75rem; color: var(--color-primary); display: flex; align-items: center; gap: 0.75rem; margin-top: 3rem; padding-top: 1rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-border); }
+        
+        h2 .icon { width: 1.2em; height: 1.2em; vertical-align: middle; }
+        
+        h3 { margin-top: 2rem; margin-bottom: 1rem; font-size: 1.2rem; color: var(--color-primary); border-left: 3px solid var(--color-primary); padding-left: 1rem; }
+        
+        hr { border: none; height: 1px; background-color: var(--color-border); margin: 3rem 0; }
+        
+        p, ul, ol, li { color: var(--color-text-medium); }
+        
+        strong { color: var(--color-text); font-weight: 600; }
+        
+        code { background-color: var(--color-surface-muted); color: var(--color-text-medium); padding: 0.2em 0.4em; border-radius: 4px; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+        
+        pre > code { display: block; padding: 1rem; white-space: pre-wrap; word-wrap: break-word; }
+        
+        .quote-block { white-space: pre-wrap; color: var(--color-text-medium); font-size: 0.9rem; background-color: var(--color-surface); padding: 1rem; border-radius: 6px; border: 1px solid var(--color-border); }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem; }
+        th, td { padding: 0.75rem 1rem; border: 1px solid var(--color-border); text-align: left; }
+        th { background-color: var(--color-surface-muted); font-weight: 600; color: var(--color-text); }
+        tbody tr:nth-child(odd) { background-color: var(--color-background); }
+        tbody tr:nth-child(even) { background-color: var(--color-surface-muted); }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <nav>
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#welcome" class="active">Welcome</a></li>
+                <li><a href="#getting-started">Getting Started</a></li>
+                <li><a href="#editing-features">Editing Features</a></li>
+                <li><a href="#power-features">Power Features</a></li>
+                <li><a href="#keyboard-shortcuts">Keyboard Shortcuts</a></li>
+                <li><a href="#license">License</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="container">
+        <header class="header">
+            <div style="display: flex; align-items: center; gap: 1.5rem;">
+                <img src="/images/icon-app-circle.svg" alt="TekaStory Logo" class="header-logo">
+                <div>
+                    <h1 style="margin-bottom: 0;">TekaStory</h1>
+                    <p class="subheading" style="margin-top: 0.25rem; margin-bottom: 0;">Your intuitive assistant for visual storytelling.</p>
+                </div>
+            </div>
+        </header>
+
+        <section id="welcome">
+            <p>TekaStory is a powerful and intuitive web application designed to streamline your creative process. Visually plan your narrative with customizable panels, title pages, and end cards. Save your projects locally and export them to professional-looking PDFs for easy sharing and presentation.</p>
+            <h3>Core Features</h3>
+            <ul>
+                <li><strong>Customizable Title & End Pages:</strong> Set the stage with a unique title page and conclude your story with a matching end card.</li>
+                <li><strong>Dynamic Storyboard Canvas:</strong> Effortlessly add, remove, and reorder storyboard panels with drag-and-drop.</li>
+                <li><strong>Rich Panel Content:</strong> Add a visual and a script to each panel. Use <code>[brackets]</code> to highlight parts of your script.</li>
+                <li><strong>Integrated Asset Management:</strong> Upload and manage your background images, logos, and panel images directly within the app.</li>
+                <li><strong>Save & Load Projects:</strong> Save your entire project, including all assets, into a single <code>.tekastory</code> file. Load it back anytime to continue your work.</li>
+                <li><strong>PDF Export:</strong> Generate a clean, professional PDF of your entire storyboard with one click.</li>
+                <li><strong>Undo/Redo History:</strong> Work fearlessly with a complete history stack for all your actions.</li>
+                <li><strong>Helpful Tooltips:</strong> Get instant guidance on various features directly within the UI.</li>
+            </ul>
+        </section>
+
+        <section id="getting-started">
+            <h2><img src="/images/icon-getting-started.svg" class="icon" alt="Getting Started Icon"> Getting Started</h2>
+            <p>Getting started with TekaStory is simple. The application opens with a default project, ready for you to customize.</p>
+            <ol>
+                <li><strong>Set Your Project Title:</strong> In the "Title & End Page Editor", use the "Project Title (for Saving)" field. This will be used for your filenames.</li>
+                <li><strong>Customize Your Title Page:</strong> Still in the editor, set your on-screen <code>Header</code> and <code>Sub-Header</code>, upload a shared background image, and add a logo for your title and end cards.</li>
+                <li><strong>Build Your Story:</strong> Move down to the "Panels" section. Add images and text to the panels to bring your story to life.</li>
+                <li><strong>Save Your Work:</strong> Click the <strong>Save Project</strong> button to download a <code>.tekastory</code> file containing your entire project.</li>
+                <li><strong>Export:</strong> When you're ready, click <strong>Export to PDF</strong> to get a shareable document.</li>
+            </ol>
+        </section>
+
+        <section id="editing-features">
+            <h2><img src="/images/icon-editor.svg" class="icon" alt="Editor Icon"> Editing Features</h2>
+            <h3>Title & End Page Editor</h3>
+            <p>This is your control center for the opening and closing scenes of your story.</p>
+            <ul>
+                <li><strong>Project Title:</strong> A dedicated field for your project's filename when saving or exporting.</li>
+                <li><strong>On-Screen Text:</strong> Define the <code>Header</code> and <code>Sub-Header</code> text that appears on the title page.</li>
+                <li><strong>Background & Logo:</strong> Upload a shared background image and logo for both the title and end pages. You can remove them to revert to the defaults.</li>
+                <li><strong>Logo Placement:</strong> Fine-tune the <code>Position</code> and <code>Size</code> of your logo independently for the title and end pages. You can also link their sizes so they change together.</li>
+            </ul>
+            <h3>Panels</h3>
+            <p>The canvas is where your narrative takes shape, panel by panel.</p>
+            <ul>
+                <li><strong>Adding Panels:</strong> Click the <strong>Add New Panel</strong> button to add more panels to your story.</li>
+                <li><strong>Reordering Panels:</strong> Simply <strong>click and drag</strong> a panel using the grip handle to a new position to reorder your scenes.</li>
+                <li><strong>Panel Content:</strong> Upload an image and write your script. Text wrapped in <code>[square brackets]</code> will be highlighted, which is great for actions or camera directions. The script is limited to 6 lines to maintain a clean layout in the final PDF.</li>
+                <li><strong>Removing Panels:</strong> Click the <strong>trash can icon</strong> on a panel to remove it.</li>
+            </ul>
+        </section>
+
+        <section id="power-features">
+            <h2><img src="/images/icon-power.svg" class="icon" alt="Power Features Icon"> Power Features</h2>
+            <h3>Project Management</h3>
+            <ul>
+                <li><strong>Save Project (<code>Ctrl+S</code>):</strong> Bundles your entire project—all text, settings, and image assets—into a single <code>.tekastory</code> file for easy storage and sharing.</li>
+                <li><strong>Load Project (<code>Ctrl+O</code>):</strong> Open a <code>.tekastory</code> file to load a project back into the editor, exactly as you left it.</li>
+                <li><strong>Pro Tip:</strong> A <code>.tekastory</code> file is actually a standard <code>.zip</code> archive. You can rename the file extension to <code>.zip</code> to manually browse and access all your project assets! This is useful for extracting images or backing up specific parts of your project.</li>
+            </ul>
+        </section>
+        
+        <section id="keyboard-shortcuts">
+             <h2><img src="/images/icon-power.svg" class="icon" alt="Shortcuts Icon"> Keyboard Shortcuts</h2>
+             <table>
+                <thead>
+                    <tr>
+                        <th>Shortcut</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>Ctrl</code>/<code>Cmd</code> + <code>S</code></td><td>Save Project</td></tr>
+                    <tr><td><code>Ctrl</code>/<code>Cmd</code> + <code>O</code></td><td>Load Project</td></tr>
+                    <tr><td><code>Ctrl</code>/<code>Cmd</code> + <code>B</code></td><td>Add New Panel</td></tr>
+                    <tr><td><code>Ctrl</code>/<code>Cmd</code> + <code>Z</code></td><td>Undo Last Action</td></tr>
+                    <tr><td><code>Ctrl</code>/<code>Cmd</code> + <code>Shift</code>+<code>Z</code></td><td>Redo Last Action</td></tr>
+                    <tr><td><code>Ctrl</code>/<code>Cmd</code> + <code>Y</code></td><td>Redo Last Action</td></tr>
+                </tbody>
+             </table>
+        </section>
+        <hr>
+
+        <section id="license">
+            <h2><img src="/images/icon-license.svg" class="icon" alt="License Icon"> License</h2>
+            <div class="quote-block">Copyright (c) 2025 Mundhir Werner
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+<strong>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.</strong> IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('main section[id]');
+            const navLinks = document.querySelectorAll('.sidebar nav a');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { rootMargin: '0px 0px -40% 0px' });
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+</html>
