@@ -1,2 +1,0 @@
-# tekastory
-A storyboard application
