@@ -148,4 +148,4 @@ Inside, you will find:
 This project is licensed under the MIT License. A copy of the license text is included in the application's help documentation.
 
 <hr>
-<p align="center">Created with ❤️ by Mundhir Werner</p>
+<p align="center">Created with ❤️ by Mundhir</p>
