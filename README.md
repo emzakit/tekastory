@@ -70,7 +70,7 @@ Before you begin, ensure you have the following installed on your system:
 1.  **Download the Source Code**
     Clone the repository to your local machine to get the full source code:
     ```sh
-    git clone https://github.com/your-github-username/tekastory.git
+    git clone https://github.com/emzakit/tekastory.git
     cd tekastory
     ```
 
