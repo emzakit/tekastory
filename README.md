@@ -142,8 +142,8 @@ Inside, you will find:
 | `Ctrl`/`Cmd` + `Shift` + `Z`  | Redo Last Action  |
 | `Ctrl`/`Cmd` + `Y`            | Redo Last Action  |
 
-## 🤖 The EmTools Project
-This application is part of my ongoing **EmTools** project, where I explore and utilise AI to develop useful applications.
+## 🤖 The Emzakit Project
+This application is part of my ongoing **Emzakit** project, where I explore and utilise AI to develop useful applications.
 
 **AI tools used in this project:**
 *   Google AI Studio
