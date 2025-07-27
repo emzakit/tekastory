@@ -31,15 +31,14 @@ To see TekaStory in action, a sample project is included in the `/sample_project
 
 `sample_project-250726-2032.tekastory`:
 
-This is the project file. Use the "Load Project" button in the app to open it and explore its contents.
+- This is the project file.
+- Use the "Load Project" button in the app to open it and explore its contents.
 
 `sample_project-250726.pdf`:
 
-This is the final PDF export of the sample project. This demonstrates the high-quality output you can achieve.
-
-It is currently uncompressed, so you will need to do that yourself using [Adobe Acrobat](https://www.adobe.com/uk/acrobat/online/compress-pdf.html) or another tool like [iLovePDF](https://www.ilovepdf.com/compress_pdf).
-
-I did originally have a compression feature built in, but it was a bit of a mess and didn't function correctly. Will look into that in the future.
+- This is the final PDF export of the sample project. This demonstrates the high-quality output you can achieve.
+- It is currently uncompressed, so you will need to do that yourself using [Adobe Acrobat](https://www.adobe.com/uk/acrobat/online/compress-pdf.html) or another tool like [iLovePDF](https://www.ilovepdf.com/compress_pdf).
+- I did originally have a compression feature built in, but it was a bit of a mess and didn't function correctly. Will look into that in the future.
 
 ## ✨ Key Features
 
